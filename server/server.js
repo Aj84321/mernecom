@@ -11,6 +11,10 @@ app.get('/api', (req, res) => {
     });
 });
 
+app.use(express.json());
+
+// For parsing URL-encoded data
+app.use(express.urlencoded({ extended: true }));
 
 app.listen(PORT,()=>{
     console.log("Server is Running")
